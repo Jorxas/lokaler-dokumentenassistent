@@ -1,0 +1,17 @@
+{
+  "id": "P03",
+  "status": "initialisiert",
+  "businessImplemented": false,
+  "fixture": "beispieldaten/fragen.json",
+  "format": "json",
+  "expectedRecords": 10,
+  "starter": "src/suchen.py",
+  "command": "python src/suchen.py",
+  "implementationTickets": [
+    "P03-T01",
+    "P03-T02",
+    "P03-T03",
+    "P03-T04"
+  ],
+  "language": "de"
+}
