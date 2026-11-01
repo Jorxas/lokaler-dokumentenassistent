@@ -1,0 +1,62 @@
+[
+  {
+    "frage": "Wie starte ich den Dienst?",
+    "quelle": "start.md",
+    "erwartete_antwort": "Nach der Implementierung den dokumentierten Startbefehl ausführen. Ein konkreter Dienstbefehl steht hier noch nicht; die Anweisung ist insoweit begrenzt.",
+    "beleg": "Nach der Implementierung den dokumentierten Startbefehl ausführen."
+  },
+  {
+    "frage": "Welchen Port verwendet die Demo?",
+    "quelle": "start.md",
+    "erwartete_antwort": "Die spätere Demo verwendet den lokalen Port 8081.",
+    "beleg": "Die spätere Demo verwendet den lokalen Port 8081."
+  },
+  {
+    "frage": "Wie beende ich die Demo?",
+    "quelle": "start.md",
+    "erwartete_antwort": "Den Prozess mit Strg+C beenden.",
+    "beleg": "Den Prozess mit Strg+C beenden."
+  },
+  {
+    "frage": "Was tun, wenn der Dienst nicht antwortet?",
+    "quelle": "support.md",
+    "erwartete_antwort": "Prozess und Port prüfen.",
+    "beleg": "Antwortet der Dienst nicht, Prozess und Port prüfen."
+  },
+  {
+    "frage": "Wo liegen die Protokolle?",
+    "quelle": "support.md",
+    "erwartete_antwort": "Die Demoprotokolle liegen unter ausgabe/.",
+    "beleg": "Demoprotokolle liegen unter ausgabe/."
+  },
+  {
+    "frage": "Wann eskaliere ich einen Vorfall?",
+    "quelle": "support.md",
+    "erwartete_antwort": "Wenn der Fehler nach einem Neustart mit den Beispieldaten reproduzierbar bleibt.",
+    "beleg": "Eskalieren, wenn der Fehler nach einem Neustart mit den Beispieldaten reproduzierbar bleibt."
+  },
+  {
+    "frage": "Darf ich personenbezogene Daten importieren?",
+    "quelle": "daten.md",
+    "erwartete_antwort": "Nein, keine personenbezogenen Daten importieren; nur synthetische Beispiele verwenden.",
+    "beleg": "Nur synthetische Beispiele verwenden. Keine personenbezogenen Daten importieren."
+  },
+  {
+    "frage": "Wie benenne ich Beispieldateien?",
+    "quelle": "daten.md",
+    "erwartete_antwort": "Mit demo und dem jeweiligen Thema benennen.",
+    "beleg": "Beispieldateien mit demo und dem jeweiligen Thema benennen;"
+  },
+  {
+    "frage": "Wie lautet das Administratorkennwort?",
+    "quelle": null,
+    "erwartete_antwort": "Unbeantwortbar: In den drei Dokumenten steht kein Administratorkennwort.",
+    "beleg": null
+  },
+  {
+    "frage": "Wie hoch ist das Budget im kommenden Jahr?",
+    "quelle": null,
+    "erwartete_antwort": "Unbeantwortbar: In den drei Dokumenten steht kein Budget für das kommende Jahr.",
+    "beleg": null
+  }
+]

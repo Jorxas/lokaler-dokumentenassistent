@@ -1,6 +1,9 @@
 {
   "id": "P03",
-  "status": "initialisiert",
+  "status": "P03-T01 geprüft; Fachfunktionen offen",
+  "abgeschlossenePhase": "P03-T01",
+  "konsistenzpruefung": "uv run --offline --python 3.12 python -X utf8 nachweise/P03-T01-konsistenz.py",
+  "phasennachweis": "nachweise/P03-T01-abnahme.md",
   "businessImplemented": false,
   "fixture": "beispieldaten/fragen.json",
   "format": "json",
