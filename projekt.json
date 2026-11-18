@@ -1,0 +1,27 @@
+{
+  "id": "P03",
+  "status": "Basis lokal geprüft; 9/10 Quellenzuordnungen; bekannte Antwortlücke dokumentiert",
+  "abgeschlossenePhase": "P03-T04",
+  "konsistenzpruefung": "uv run --offline --python 3.12 python -X utf8 nachweise/P03-T01-konsistenz.py",
+  "suchpruefung": "uv run --offline --python 3.12 python -X utf8 nachweise/P03-T02-pruefung.py",
+  "phasennachweis": "nachweise/P03-T02-abnahme.md",
+  "blockadenachweis": "nachweise/P03-T03-blockade.md",
+  "voraussetzungspruefung": "uv run --offline --python 3.12 python -X utf8 nachweise/P03-T03-voraussetzungen.py",
+  "businessImplemented": true,
+  "fixture": "beispieldaten/fragen.json",
+  "format": "json",
+  "expectedRecords": 10,
+  "starter": "src/suchen.py",
+  "command": "uv run --offline --python 3.12 python -X utf8 src/suchen.py \"Port 8081\"",
+  "implementationTickets": [
+    "P03-T01",
+    "P03-T02",
+    "P03-T03",
+    "P03-T04"
+  ],
+  "language": "de",
+  "modell": "qwen2.5:1.5b",
+  "modellEndpunkt": "http://127.0.0.1:11434/api/generate",
+  "modellpruefung": "uv run --offline --python 3.12 python -X utf8 nachweise/P03-T03-pruefung.py",
+  "auswertung": "nachweise/P03-T04-auswertung.json"
+}

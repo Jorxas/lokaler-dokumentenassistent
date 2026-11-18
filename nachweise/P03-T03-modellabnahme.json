@@ -1,0 +1,47 @@
+{
+  "schutzpruefungen": "bestanden; kontrollierte Fehler sind ausschließlich Testfälle",
+  "echterModellaufruf": {
+    "zeit": "2026-11-17T17:28:30.028131+00:00",
+    "frage": "Welchen Port verwendet die Demo?",
+    "verfahren": "Stichwortsuche mit lokaler Modellauswahl eines Zitats",
+    "status": "belegt",
+    "antwort": {
+      "quelle": "start.md/A001",
+      "zitat": "Die spätere Demo verwendet den lokalen Port 8081. Nach der Implementierung den dokumentierten Startbefehl ausführen. Den Prozess mit Strg+C beenden."
+    },
+    "quellen": [
+      {
+        "kennung": "start.md/A001",
+        "text": "Die spätere Demo verwendet den lokalen Port 8081. Nach der Implementierung den dokumentierten Startbefehl ausführen. Den Prozess mit Strg+C beenden."
+      },
+      {
+        "kennung": "daten.md/A001",
+        "text": "Nur synthetische Beispiele verwenden. Keine personenbezogenen Daten importieren. Beispieldateien mit demo und dem jeweiligen Thema benennen; Originaldaten und abgelehnte Eingaben getrennt aufbewahren."
+      },
+      {
+        "kennung": "support.md/A001",
+        "text": "Antwortet der Dienst nicht, Prozess und Port prüfen. Demoprotokolle liegen unter ausgabe/. Eskalieren, wenn der Fehler nach einem Neustart mit den Beispieldaten reproduzierbar bleibt."
+      }
+    ],
+    "modellAufgerufen": true,
+    "hinweis": "Wörtlicher Beleg geprüft. Relevanz im Original kontrollieren.",
+    "modelllauf": {
+      "vorschlag": {
+        "quelle": "start.md/A001",
+        "zitat": "Die spätere Demo verwendet den lokalen Port 8081. Nach der Implementierung den dokumentierten Startbefehl ausführen. Den Prozess mit Strg+C beenden."
+      },
+      "modell": "qwen2.5:1.5b",
+      "dauerNanosekunden": 6835489700
+    }
+  },
+  "ohneBeleg": {
+    "zeit": "2026-11-17T17:28:30.028131+00:00",
+    "frage": "Wie lautet das Administratorkennwort?",
+    "verfahren": "Stichwortsuche mit lokaler Modellauswahl eines Zitats",
+    "status": "unbeantwortbar",
+    "antwort": null,
+    "quellen": [],
+    "modellAufgerufen": false,
+    "hinweis": "Kein überprüfter Beleg; keine Antwort ausgegeben."
+  }
+}

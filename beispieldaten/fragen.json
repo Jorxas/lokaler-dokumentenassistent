@@ -1,0 +1,42 @@
+[
+  {
+    "frage": "Wie starte ich den Dienst?",
+    "quelle": "start.md"
+  },
+  {
+    "frage": "Welchen Port verwendet die Demo?",
+    "quelle": "start.md"
+  },
+  {
+    "frage": "Wie beende ich die Demo?",
+    "quelle": "start.md"
+  },
+  {
+    "frage": "Was tun, wenn der Dienst nicht antwortet?",
+    "quelle": "support.md"
+  },
+  {
+    "frage": "Wo liegen die Protokolle?",
+    "quelle": "support.md"
+  },
+  {
+    "frage": "Wann eskaliere ich einen Vorfall?",
+    "quelle": "support.md"
+  },
+  {
+    "frage": "Darf ich personenbezogene Daten importieren?",
+    "quelle": "daten.md"
+  },
+  {
+    "frage": "Wie benenne ich Beispieldateien?",
+    "quelle": "daten.md"
+  },
+  {
+    "frage": "Wie lautet das Administratorkennwort?",
+    "quelle": null
+  },
+  {
+    "frage": "Wie hoch ist das Budget im kommenden Jahr?",
+    "quelle": null
+  }
+]
