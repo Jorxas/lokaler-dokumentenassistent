@@ -1,6 +1,6 @@
 # Überprüfbarer lokaler Dokumentenassistent
 
-Stand: 3. November 2026 — **P03-T02 lokal geprüft abgeschlossen; Stichwortsuche mit Quellen verfügbar**. Geplanter Abschluss der Basis: 2026-11-03, spätestens 8. November 2026. Geschätzter Basisaufwand: 4 Stunden ohne Einrichtung und Erweiterungen.
+Stand: 10. November 2026 — **P03-T03 wegen fehlendem nachgewiesenem Modellzugang blockiert; P03-T02 bleibt lokal geprüft abgeschlossen**. Das ursprüngliche Basisziel vom 8. November wurde verfehlt; Fortsetzungszeitraum bis 15. November. Geschätzter Basisaufwand: 4 Stunden ohne Einrichtung und Erweiterungen.
 
 Ein Verein möchte die passende Anweisung in drei Dokumenten finden, ohne unbelegte Antworten zu erhalten.
 
@@ -31,6 +31,18 @@ Die lokale Python-Suche teilt Markdown-Dokumente an Leerzeilen und Überschrifte
 
 [Erweiterungen](VARIANTEN.md) haben einen eigenen Umsetzungsstand. [Private Unternehmenszuordnung](UNTERNEHMEN.lokal.md) bleibt außerhalb der Git-Verwaltung.
 
+## Voraussetzung von P03-T03 geprüft
+
+Im Projekt ist kein Modellzugang konfiguriert. Die begrenzte lokale Prüfung fand weder Modellprogramme im Suchpfad noch Modelldateien im Projekt. Die Ports 11434 und 1234 waren nicht erreichbar; Port 8080 war offen, lieferte unter `/v1/models` aber keine lesbare JSON-Modellliste. Das beweist keine allgemeine Abwesenheit installierter Modelle, bietet jedoch keine überprüfbare Grundlage für die freigegebene Anbindung.
+
+**Offlinebetrieb: ausschließlich lokale Stichwortsuche, keine Modellantworten.** Schnittstelle, Quellenprotokoll der Modellaufrufe und Unterdrückung unbelegter Modellantworten sind weiterhin offen. Es wurde keine Ersatzsimulation erstellt. [Blockadenachweis](nachweise/P03-T03-blockade.md) und [Voraussetzungsprüfung](nachweise/P03-T03-voraussetzungen.txt). T03 ist nicht abgenommen; Lastenheft A1–A4 und die Folgephase bleiben offen.
+
 ## Projektsprache
 
 Dokumentation, selbst gewählte Bezeichner, Kommentare, Meldungen und Beispieldaten werden auf Deutsch geschrieben. Festgelegte API-Schlüssel, Sprachsyntax und Produktnamen bleiben unverändert.
+
+## Modellanbindung vom 17. November 2026
+
+P03-T03 ist jetzt geprüft. Die früheren Blockaden vom 10. November bleiben Verlauf. `src/antworten.py` verwendet die vorhandene Stichwortsuche und fragt das echte lokale Modell `qwen2.5:1.5b` über Ollama ab. Das Modell liefert Quelle und wörtliches Zitat als JSON. Nur ein tatsächlich in der angegebenen Quelle vorhandenes, nicht leeres Zitat wird ausgegeben. Freie oder veränderte Texte werden unterdrückt. Ein Beleg kann trotzdem irrelevant sein: Die Schutzprüfung ersetzt keine semantische Bewertung. Keine Vektorsuche, FastAPI- oder MCP-Anbindung behauptet.
+
+Tatsächlich geprüft: lokale Portantwort mit `start.md/A001`, unbeantwortbare Kennwortfrage, Ablehnung erfundener Zitate und expliziter Offlinebetrieb. [Modellabnahme](nachweise/P03-T03-modellabnahme.json), [Prüfskript](nachweise/P03-T03-pruefung.py). T04 und die vollständige Zehn-Fragen-Auswertung sind noch offen.
