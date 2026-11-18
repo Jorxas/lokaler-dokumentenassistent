@@ -5,15 +5,33 @@ als Antwort ausgegeben. Wortgetreue Belege garantieren keine fachliche Relevanz.
 """
 import argparse
 import json
+import re
 import socket
 from datetime import datetime, timezone
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, build_opener, ProxyHandler, HTTPRedirectHandler
 
-from suchen import mit_quellen_suchen
+from suchen import mit_quellen_suchen, dokumente_aufteilen, suchwoerter_bilden, PROJEKTORDNER
 
 MODELL = "qwen2.5:1.5b"
 ENDPUNKT = "http://127.0.0.1:11434/api/generate"
+
+
+def wortkern(wort):
+    """Kleine nachvollziehbare Endungsregel, keine vollständige Sprachanalyse."""
+    return re.sub(r"(ern|en|er|es|e|n|s)$", "", wort) if len(wort) >= 6 else wort
+
+
+def kontexte_suchen(frage):
+    """Für Modellkontexte einfache Flexion und zusammengesetzte Wörter zulassen."""
+    woerter = {wortkern(w) for w in suchwoerter_bilden(frage)}
+    treffer = []
+    for abschnitt in dokumente_aufteilen(PROJEKTORDNER / "dokumente"):
+        inhalt = {wortkern(w) for w in suchwoerter_bilden(abschnitt["ueberschrift"] + " " + abschnitt["text"])}
+        passend = {w for w in woerter if any(w == t or (len(w) >= 5 and t.endswith(w)) for t in inhalt)}
+        if passend:
+            treffer.append({**abschnitt, "passend": sorted(passend)})
+    return sorted(treffer, key=lambda t: (-len(t["passend"]), t["dateiname"], t["abschnittskennung"]))
 
 
 class KeineWeiterleitung(HTTPRedirectHandler):
@@ -67,7 +85,7 @@ def beleg_pruefen(vorschlag, quellen):
 def beantworten(frage, ohne_modell=False, modellfunktion=modell_aufrufen):
     if not isinstance(frage, str) or not frage.strip() or len(frage) > 2000:
         raise ValueError("Frage muss zwischen 1 und 2000 Zeichen enthalten.")
-    treffer = mit_quellen_suchen(frage)
+    treffer = mit_quellen_suchen(frage) if ohne_modell else kontexte_suchen(frage)
     quellen = [{"kennung": t["dateiname"] + "/" + t["abschnittskennung"],
                 "text": t["text"]} for t in treffer[:3]]
     ergebnis = {"zeit": datetime.now(timezone.utc).isoformat(), "frage": frage,

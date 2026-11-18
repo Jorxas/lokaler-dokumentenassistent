@@ -1,0 +1,314 @@
+{
+  "zeit": "2026-11-17T17:31:30.142191+00:00",
+  "fragen": 10,
+  "richtigZugeordneteQuellen": 7,
+  "echteModellaufrufe": 7,
+  "unbeantwortbareFragenZurueckgehalten": 2,
+  "datenpruefsummen": {
+    "beispieldaten\\fragen.json": "0a6ba0a2140445ce439f8f6eee5764d9f1fbaf286da3ac5953ec89b752533c9f",
+    "dokumente\\daten.md": "fcbc42c6210107138d30bea36b8d9f9c6504a1ff70fce63c036e635e0fd8fb1d",
+    "dokumente\\start.md": "71de2f819d5e57832afafa9c6575a9088e67b6e3a1cfa85be4399adfc2ef0223",
+    "dokumente\\support.md": "76a908e0b0a1b2f125b18defd01168b8aa23260dbc6d7b0ca9747b7575dc4f37"
+  },
+  "ergebnisse": [
+    {
+      "nummer": 1,
+      "sollQuelle": "start.md",
+      "quellenauswahlRichtig": false,
+      "suchtreffer": [
+        "support.md"
+      ],
+      "modell": {
+        "zeit": "2026-11-17T17:31:02.987475+00:00",
+        "frage": "Wie starte ich den Dienst?",
+        "verfahren": "Stichwortsuche mit lokaler Modellauswahl eines Zitats",
+        "status": "belegt",
+        "antwort": {
+          "quelle": "support.md/A001",
+          "zitat": "Antwortet der Dienst nicht, Prozess und Port prüfen. Demoprotokolle liegen unter ausgabe/. Eskalieren, wenn der Fehler nach einem Neustart mit den Beispieldaten reproduzierbar bleibt."
+        },
+        "quellen": [
+          {
+            "kennung": "support.md/A001",
+            "text": "Antwortet der Dienst nicht, Prozess und Port prüfen. Demoprotokolle liegen unter ausgabe/. Eskalieren, wenn der Fehler nach einem Neustart mit den Beispieldaten reproduzierbar bleibt."
+          }
+        ],
+        "modellAufgerufen": true,
+        "hinweis": "Wörtlicher Beleg geprüft. Relevanz im Original kontrollieren.",
+        "modelllauf": {
+          "vorschlag": {
+            "quelle": "support.md/A001",
+            "zitat": "Antwortet der Dienst nicht, Prozess und Port prüfen. Demoprotokolle liegen unter ausgabe/. Eskalieren, wenn der Fehler nach einem Neustart mit den Beispieldaten reproduzierbar bleibt."
+          },
+          "modell": "qwen2.5:1.5b",
+          "dauerNanosekunden": 4127835500
+        }
+      }
+    },
+    {
+      "nummer": 2,
+      "sollQuelle": "start.md",
+      "quellenauswahlRichtig": true,
+      "suchtreffer": [
+        "start.md",
+        "daten.md",
+        "support.md"
+      ],
+      "modell": {
+        "zeit": "2026-11-17T17:31:07.142188+00:00",
+        "frage": "Welchen Port verwendet die Demo?",
+        "verfahren": "Stichwortsuche mit lokaler Modellauswahl eines Zitats",
+        "status": "belegt",
+        "antwort": {
+          "quelle": "start.md/A001",
+          "zitat": "Die spätere Demo verwendet den lokalen Port 8081. Nach der Implementierung den dokumentierten Startbefehl ausführen. Den Prozess mit Strg+C beenden."
+        },
+        "quellen": [
+          {
+            "kennung": "start.md/A001",
+            "text": "Die spätere Demo verwendet den lokalen Port 8081. Nach der Implementierung den dokumentierten Startbefehl ausführen. Den Prozess mit Strg+C beenden."
+          },
+          {
+            "kennung": "daten.md/A001",
+            "text": "Nur synthetische Beispiele verwenden. Keine personenbezogenen Daten importieren. Beispieldateien mit demo und dem jeweiligen Thema benennen; Originaldaten und abgelehnte Eingaben getrennt aufbewahren."
+          },
+          {
+            "kennung": "support.md/A001",
+            "text": "Antwortet der Dienst nicht, Prozess und Port prüfen. Demoprotokolle liegen unter ausgabe/. Eskalieren, wenn der Fehler nach einem Neustart mit den Beispieldaten reproduzierbar bleibt."
+          }
+        ],
+        "modellAufgerufen": true,
+        "hinweis": "Wörtlicher Beleg geprüft. Relevanz im Original kontrollieren.",
+        "modelllauf": {
+          "vorschlag": {
+            "quelle": "start.md/A001",
+            "zitat": "Die spätere Demo verwendet den lokalen Port 8081. Nach der Implementierung den dokumentierten Startbefehl ausführen. Den Prozess mit Strg+C beenden."
+          },
+          "modell": "qwen2.5:1.5b",
+          "dauerNanosekunden": 2932985900
+        }
+      }
+    },
+    {
+      "nummer": 3,
+      "sollQuelle": "start.md",
+      "quellenauswahlRichtig": true,
+      "suchtreffer": [
+        "daten.md",
+        "start.md"
+      ],
+      "modell": {
+        "zeit": "2026-11-17T17:31:10.096501+00:00",
+        "frage": "Wie beende ich die Demo?",
+        "verfahren": "Stichwortsuche mit lokaler Modellauswahl eines Zitats",
+        "status": "belegt",
+        "antwort": {
+          "quelle": "start.md/A001",
+          "zitat": "Den Prozess mit Strg+C beenden."
+        },
+        "quellen": [
+          {
+            "kennung": "daten.md/A001",
+            "text": "Nur synthetische Beispiele verwenden. Keine personenbezogenen Daten importieren. Beispieldateien mit demo und dem jeweiligen Thema benennen; Originaldaten und abgelehnte Eingaben getrennt aufbewahren."
+          },
+          {
+            "kennung": "start.md/A001",
+            "text": "Die spätere Demo verwendet den lokalen Port 8081. Nach der Implementierung den dokumentierten Startbefehl ausführen. Den Prozess mit Strg+C beenden."
+          }
+        ],
+        "modellAufgerufen": true,
+        "hinweis": "Wörtlicher Beleg geprüft. Relevanz im Original kontrollieren.",
+        "modelllauf": {
+          "vorschlag": {
+            "quelle": "start.md/A001",
+            "zitat": "Den Prozess mit Strg+C beenden."
+          },
+          "modell": "qwen2.5:1.5b",
+          "dauerNanosekunden": 2991881300
+        }
+      }
+    },
+    {
+      "nummer": 4,
+      "sollQuelle": "support.md",
+      "quellenauswahlRichtig": true,
+      "suchtreffer": [
+        "support.md"
+      ],
+      "modell": {
+        "zeit": "2026-11-17T17:31:13.113690+00:00",
+        "frage": "Was tun, wenn der Dienst nicht antwortet?",
+        "verfahren": "Stichwortsuche mit lokaler Modellauswahl eines Zitats",
+        "status": "belegt",
+        "antwort": {
+          "quelle": "support.md/A001",
+          "zitat": "Antwortet der Dienst nicht, Prozess und Port prüfen. Demoprotokolle liegen unter ausgabe/. Eskalieren, wenn der Fehler nach einem Neustart mit den Beispieldaten reproduzierbar bleibt."
+        },
+        "quellen": [
+          {
+            "kennung": "support.md/A001",
+            "text": "Antwortet der Dienst nicht, Prozess und Port prüfen. Demoprotokolle liegen unter ausgabe/. Eskalieren, wenn der Fehler nach einem Neustart mit den Beispieldaten reproduzierbar bleibt."
+          }
+        ],
+        "modellAufgerufen": true,
+        "hinweis": "Wörtlicher Beleg geprüft. Relevanz im Original kontrollieren.",
+        "modelllauf": {
+          "vorschlag": {
+            "quelle": "support.md/A001",
+            "zitat": "Antwortet der Dienst nicht, Prozess und Port prüfen. Demoprotokolle liegen unter ausgabe/. Eskalieren, wenn der Fehler nach einem Neustart mit den Beispieldaten reproduzierbar bleibt."
+          },
+          "modell": "qwen2.5:1.5b",
+          "dauerNanosekunden": 4182418100
+        }
+      }
+    },
+    {
+      "nummer": 5,
+      "sollQuelle": "support.md",
+      "quellenauswahlRichtig": true,
+      "suchtreffer": [
+        "support.md"
+      ],
+      "modell": {
+        "zeit": "2026-11-17T17:31:17.322445+00:00",
+        "frage": "Wo liegen die Protokolle?",
+        "verfahren": "Stichwortsuche mit lokaler Modellauswahl eines Zitats",
+        "status": "belegt",
+        "antwort": {
+          "quelle": "support.md/A001",
+          "zitat": "Antwortet der Dienst nicht, Prozess und Port prüfen. Demoprotokolle liegen unter ausgabe/. Eskalieren, wenn der Fehler nach einem Neustart mit den Beispieldaten reproduzierbar bleibt."
+        },
+        "quellen": [
+          {
+            "kennung": "support.md/A001",
+            "text": "Antwortet der Dienst nicht, Prozess und Port prüfen. Demoprotokolle liegen unter ausgabe/. Eskalieren, wenn der Fehler nach einem Neustart mit den Beispieldaten reproduzierbar bleibt."
+          }
+        ],
+        "modellAufgerufen": true,
+        "hinweis": "Wörtlicher Beleg geprüft. Relevanz im Original kontrollieren.",
+        "modelllauf": {
+          "vorschlag": {
+            "quelle": "support.md/A001",
+            "zitat": "Antwortet der Dienst nicht, Prozess und Port prüfen. Demoprotokolle liegen unter ausgabe/. Eskalieren, wenn der Fehler nach einem Neustart mit den Beispieldaten reproduzierbar bleibt."
+          },
+          "modell": "qwen2.5:1.5b",
+          "dauerNanosekunden": 3962376900
+        }
+      }
+    },
+    {
+      "nummer": 6,
+      "sollQuelle": "support.md",
+      "quellenauswahlRichtig": false,
+      "suchtreffer": [],
+      "modell": {
+        "zeit": "2026-11-17T17:31:21.305289+00:00",
+        "frage": "Wann eskaliere ich einen Vorfall?",
+        "verfahren": "Stichwortsuche mit lokaler Modellauswahl eines Zitats",
+        "status": "unbeantwortbar",
+        "antwort": null,
+        "quellen": [],
+        "modellAufgerufen": false,
+        "hinweis": "Kein überprüfter Beleg; keine Antwort ausgegeben."
+      }
+    },
+    {
+      "nummer": 7,
+      "sollQuelle": "daten.md",
+      "quellenauswahlRichtig": true,
+      "suchtreffer": [
+        "daten.md"
+      ],
+      "modell": {
+        "zeit": "2026-11-17T17:31:21.305844+00:00",
+        "frage": "Darf ich personenbezogene Daten importieren?",
+        "verfahren": "Stichwortsuche mit lokaler Modellauswahl eines Zitats",
+        "status": "belegt",
+        "antwort": {
+          "quelle": "daten.md/A001",
+          "zitat": "Nur synthetische Beispiele verwenden. Keine personenbezogenen Daten importieren. Beispieldateien mit demo und dem jeweiligen Thema benennen; Originaldaten und abgelehnte Eingaben getrennt aufbewahren."
+        },
+        "quellen": [
+          {
+            "kennung": "daten.md/A001",
+            "text": "Nur synthetische Beispiele verwenden. Keine personenbezogenen Daten importieren. Beispieldateien mit demo und dem jeweiligen Thema benennen; Originaldaten und abgelehnte Eingaben getrennt aufbewahren."
+          }
+        ],
+        "modellAufgerufen": true,
+        "hinweis": "Wörtlicher Beleg geprüft. Relevanz im Original kontrollieren.",
+        "modelllauf": {
+          "vorschlag": {
+            "quelle": "daten.md/A001",
+            "zitat": "Nur synthetische Beispiele verwenden. Keine personenbezogenen Daten importieren. Beispieldateien mit demo und dem jeweiligen Thema benennen; Originaldaten und abgelehnte Eingaben getrennt aufbewahren."
+          },
+          "modell": "qwen2.5:1.5b",
+          "dauerNanosekunden": 4243847800
+        }
+      }
+    },
+    {
+      "nummer": 8,
+      "sollQuelle": "daten.md",
+      "quellenauswahlRichtig": false,
+      "suchtreffer": [
+        "daten.md"
+      ],
+      "modell": {
+        "zeit": "2026-11-17T17:31:25.568336+00:00",
+        "frage": "Wie benenne ich Beispieldateien?",
+        "verfahren": "Stichwortsuche mit lokaler Modellauswahl eines Zitats",
+        "status": "unbeantwortbar",
+        "antwort": null,
+        "quellen": [
+          {
+            "kennung": "daten.md/A001",
+            "text": "Nur synthetische Beispiele verwenden. Keine personenbezogenen Daten importieren. Beispieldateien mit demo und dem jeweiligen Thema benennen; Originaldaten und abgelehnte Eingaben getrennt aufbewahren."
+          }
+        ],
+        "modellAufgerufen": true,
+        "hinweis": "Kein überprüfter Beleg; keine Antwort ausgegeben.",
+        "modelllauf": {
+          "vorschlag": {
+            "quelle": "daten.md/A001",
+            "zitat": "Nur synthetische Beispieldateien verwenden. Keine personenbezogenen Daten importieren. Beispieldateien mit demo und dem jeweiligen Thema benennen; Originaldaten und abgelehnte Eingaben getrennt aufbewahren."
+          },
+          "modell": "qwen2.5:1.5b",
+          "dauerNanosekunden": 4544317500
+        }
+      }
+    },
+    {
+      "nummer": 9,
+      "sollQuelle": null,
+      "quellenauswahlRichtig": true,
+      "suchtreffer": [],
+      "modell": {
+        "zeit": "2026-11-17T17:31:30.139373+00:00",
+        "frage": "Wie lautet das Administratorkennwort?",
+        "verfahren": "Stichwortsuche mit lokaler Modellauswahl eines Zitats",
+        "status": "unbeantwortbar",
+        "antwort": null,
+        "quellen": [],
+        "modellAufgerufen": false,
+        "hinweis": "Kein überprüfter Beleg; keine Antwort ausgegeben."
+      }
+    },
+    {
+      "nummer": 10,
+      "sollQuelle": null,
+      "quellenauswahlRichtig": true,
+      "suchtreffer": [],
+      "modell": {
+        "zeit": "2026-11-17T17:31:30.141650+00:00",
+        "frage": "Wie hoch ist das Budget im kommenden Jahr?",
+        "verfahren": "Stichwortsuche mit lokaler Modellauswahl eines Zitats",
+        "status": "unbeantwortbar",
+        "antwort": null,
+        "quellen": [],
+        "modellAufgerufen": false,
+        "hinweis": "Kein überprüfter Beleg; keine Antwort ausgegeben."
+      }
+    }
+  ],
+  "grenze": "Quellenauswahl misst keine vollständige semantische Antwortqualität. Keine industrielle Übertragbarkeit. MCP nicht implementiert."
+}
